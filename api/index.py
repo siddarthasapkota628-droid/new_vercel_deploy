@@ -1,3 +1,4 @@
 
-from myproject.wsgi import application as handler
-
+def handler(environ, start_response):
+    start_response("200 OK", [("Content-Type", "text/plain")])
+    return [b"Hello from Vercel WSGI!"]
